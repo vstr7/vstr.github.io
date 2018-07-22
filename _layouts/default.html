@@ -1,23 +1,14 @@
----
-layout: compress
----
-<!doctype html>
-<html class="no-js" lang="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}">
-<head>
-	{% include _head.html %}
-</head>
-<body id="top-of-page" class="{{ layout.format }}">
-	{% unless page.skip_boilerplate %}
-	{% include _navigation.html %}
-	{% endunless %}
-
-	{% include _masthead.html %}
-	{{ content }}
-
-	{% unless page.skip_boilerplate %}
-	{% include _footer.html %}
-	{% endunless %}
-
-	{% include _footer_scripts.html %}
-</body>
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+-->
+<html>
+	{%- include head.html -%}
+	<body>
+		{{- content -}}
+		{%- include footer.html -%}
+	</body>
 </html>

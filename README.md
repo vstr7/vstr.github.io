@@ -1,69 +1,167 @@
-## You like and use this theme? Then support me. Just [paypal.me/PhlowMedia](https://www.paypal.me/PhlowMedia) :)
+p h o t o r a m a 
+====================
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=Phlow&url=https://github.com/Phlow/feeling-responsive&title=Support%20Feeling%20Responsive%20Jekyll%20Theme&language=en_GB&tags=github,jekyll,theme,webdesign&category=software)
+![photorama](https://raw.githubusercontent.com/sunbliss/photorama/gh-pages/photorama_thumb.gif)
 
+----------
 
-# Newsletter: Stay in Touch for Future Updates
+---> [DEMO](https://sunbliss.github.io/photorama/ "DEMO")  <---
 
-If you are a webdesigner interested in Jekyll, the static website generator, this little newsletter is for you. I share tutorials, clever code snippets and information about my own Jekyll Themes called [*Feeling Responsive*][7] and [*Simplicity*][8]. Please don't expect weekly emails :)
+----------
 
-[![Subscribe to Jekyll Newsletter](https://phlow.github.io/static/tinyletter_subscribe_button.png)](https://tinyletter.com/feeling-responsive)
+A theme for **jekyll**. 
 
+Created for gh-pages (project page).
 
-[![Start Video](https://github.com/Phlow/feeling-responsive/blob/gh-pages/images/video-feeling-responsive-1280x720.jpg)](https://www.youtube.com/embed/3b5zCFSmVvU)
+This template was crafted having in mind the photobloggers.
 
-## A Responsive Jekyll Theme: *Feeling Responsive*
+It uses [Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll "Clean Blog") as its basis.
 
-Do you want to get to know *Feeling Responsive*? Than check it out first and have a look on its home at  <http://phlow.github.io/feeling-responsive/>.
+----------
+## Change Log
 
-To get to know *Feeling Responsive* check out all the features explained in the [documentation][1].
+### Version 2.2 (4/23/2018)
 
-And what license is *Feeling Responsive* released under? [This one][2].
+<a href="https://github.com/sunbliss/photorama/wiki/How-to-get-SSL-on-Jekyll%3F"> How to get SSL Certificate (Https) For Jekyll</a>
 
+### Version 2.1 (3/22/2017)
 
-
-## Why use this theme?
-
-Feeling Responsive is heavily customizable.
-
-1. Language-Support :)
-2. Optimized for speed and it's responsive.
-3. Built on Foundation Framework.
-4. Six different Headers.
-5. Customizable navigation, footer,...
-
-**[More ›][3]**
+* Fixed script loading. 
+* Fixed padding bottom for the navbar toggle menu.
 
 
+### Version 2.0 (2/4/2017)
 
-## Changelog
+* HTTPS is now enforced. 
 
-*Feeling Responsive* is in active development. Thank you to everyone who contributed, especially [Róbert Papp][5], [Alexandra von Criegern](https://github.com/plutonik-a) and [Juan Jose Amor Iglesias](https://github.com/jjamor).
+~~**Custom Domains are not supported.**~~
 
-**[Read Changelog ›][6]**
+~~For the time being, the only way to apply a custom domain name is by removing HTTPS as of the previous version. 
+Hoping Github developers will give its users the ability to add a custom domain served under security.~~
+
+### Version 1.2 (1/31/2017)
+
+* Fixed footer code so that the twitter icon links to the twitter_username instead of instagram_username.
+
+### Version 1.1 (7/15/2016)
+
+* Improved galleries and search section.
+* Better rendering of the header text.
+
+### Version 1.0 (6/19/2016)
+* Initial Template
+
+----------
+
+ **IMPORTANT!!!**
+================
+
+### Before you begin: Change the URL and the BASEURL as well as the internal nav links in the _config.yml
+
+The **URL** should say `https://yourusername.github.io`
+
+The **BASEURL** should say `/repositoryname`
+
+**Internal nav** should say
+
+  nav:
+
+  - GALLERY: `"https://yourusername.github.io/repositoryname/gallery/"`
+  - JOURNAL: `"https://yourusername.github.io/repositoryname/journal/"`
+  - ABOUT: `"https://yourusername.github.io/repositoryname/about/`"
+
+If there are problems with loading assets like CSS files and images, make sure that both **URL** and **BASEURL** are set correctly!!! 
+
+----------
+
+~~**NOT FOR HTTPS served repos!!!**~~
+==================================
+
+~~* Applies for v1.2!~~
+
+If you want to use your **own domain** go to the root of your project's repository, create a CNAME file and add a line with your domain name, e.g. `www.yourdomain.com`.
+
+Go to your domain name registrar and add a CNAME record pointing your domain to GitHub Pages:
+- type: CNAME
+- host: www.yourdomainname.com
+- answer: yourusername.github.io/repositoryname
+- TTL: 300
+
+----------
+
+Usage
+============ 
+
+###Quick Start
+
+1. [Fork this repository](https://github.com/sunbliss/photorama/fork) to get started. 
+2. Go to `https://github.com/yourusername/photorama/settings`
+3. Rename the repository to your new project, e.g. *myphotoblog*
+2. Create a new branch called `gh-pages` in your repository. 
+3. Go to the branches directory at `https://github.com/yourusername/repositoryname/branches` and *change* **default branch** to **gh-pages**.
+4. Delete **master** branch. 
+3. GitHub will build your site automatically and publish it at `https://yourusername.github.io/repositoryname/`.  
+
+----------
+
+- The homepage welcomes the visitors with 3 animated photos of your choice. It is recommended that all three are landscape orientated for best view.
+
+To change the welcome content at the far left of the Home page go here: `/index.html` and fill the responding lines of the YAML with your desired text.
+
+----------
+
+- To enable **disqus** comments in the posts, change their front matter for comments to 'true'.
+
+You must have a registered account in disqus, where you will also register a forum for your website.
+
+Find the line `s.src = '//yourproject.disqus.com/embed.js';  // ` in the disqus_comments.html and REPLACE 'yourproject' with your forum shortname.
+
+----------
+
+- In order to send **newsletters** about your posts to your subscribers, you should register an account in [tinyletter](http://www.tinyletter.com " tinyletter").
+
+Find the line `'https://tinyletter.com/yourproject', ` in the *newsletter.html* and replace 'yourproject' with your registered website.
+
+You can always ommit the newsletter rendering by deleting the line `{% include newsletter.html %}
+` in the *default.html* layout.
+
+----------
+
+If you want to use the matching **NEWSLETTER** template, you must always create a new file  by copying its respective index.html and renaming it to e.g. 2016-March-newsletter.html and then save it inside the folder and the accompanying images inside the 'images folder', so it can be accessed to your viewers through their browser. In this case the root url for the above newsletter will be ***http://yourgithubusername.github.io/yourproject/2016-March-newsletter.html***. Copy this link and replace this part of the code `http://www.yoursite.com/newsletter/year-month-newsletter` with it.
+
+----------
+
+**TAGS** and **CATEGORIES** of the posts 
+
+When you add a tag or a category name in the front matter of a post, don't forget to add the responding markdown files in /journal/tag/ folder and in /journal/category folder, so they can always render when browsing the journal or searching in the respective page.
+
+----------
+
+All the credits and the helpers can be found at **ABOUT** page.
 
 
+----------
 
-## Video Tutorial
-
-Click the image to [watch the YouTube-Video-Tutorial][4].
-
-[![Start Video](https://github.com/Phlow/feeling-responsive/blob/gh-pages/images/video-feeling-responsive-tutorial-frontpage.jpg)](https://www.youtube.com/watch?v=rLS-BEvlEyY)
+Read <a href="https://sunbliss.github.io/photorama/journal/images-size-for-better-performance/">**this**</a> post if you want to ensure your website always loads fast.
 
 
+----------
+
+I hope you will find it useful for your projects, photographic or not.
 
 
+----------
 
 
+##License
 
+The MIT License (MIT)
 
- [1]: http://phlow.github.io/feeling-responsive/documentation/
- [2]: https://github.com/Phlow/feeling-responsive/blob/gh-pages/LICENSE
- [3]: http://phlow.github.io/feeling-responsive/info/
- [4]: https://www.youtube.com/watch?v=rLS-BEvlEyY
- [5]: https://github.com/TWiStErRob
- [6]: https://phlow.github.io/feeling-responsive/changelog/
- [7]: http://phlow.github.io/feeling-responsive/
- [8]: http://phlow.github.io/simplicity/
- [9]: #
- [10]: #
+Copyright (c) 2014 Filippo Oretti, Dario Andrei
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+

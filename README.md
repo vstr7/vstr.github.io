@@ -1,137 +1,167 @@
-# Prologue - Jekyll Theme
+p h o t o r a m a 
+====================
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-theme-prologue.svg)](https://badge.fury.io/rb/jekyll-theme-prologue)
+![photorama](https://raw.githubusercontent.com/sunbliss/photorama/gh-pages/photorama_thumb.gif)
 
-![Prologue Theme](assets/images/screenshot.png "Prologue Theme Screenshot")
+----------
 
-This is Prologue, a simple, single page responsive site template from [HTML5 UP](https://html5up.net/prologue), now available as a blog-aware Jekyll theme from [Chris Bobbe](https://chrisbobbe.github.io). It features a clean, minimalistic design and a sticky sidebar with navigation-linked scrolling.
+---> [DEMO](https://sunbliss.github.io/photorama/ "DEMO")  <---
 
-**Demo**: https://chrisbobbe.github.io/jekyll-theme-prologue/
+----------
 
-# Added Features
+A theme for **jekyll**. 
 
-* **Blogging and multi-page features you expect from Jekyll**
-* Compatible with GitHub Pages
-* **[Formspree.io](https://formspree.io/) contact form integration** - just add your email to the `_config.yml` and it works!
-* Build your homepage with **custom scrolly sections** in the _sections folder
- * Set a **cover photo** for any section (not just the first), with alt text for screen readers and SEO
-* Add your **social profiles** easily in `_config.yml`.
-* Automatic search engine optimization (SEO) **meta tags** based on info you provide in `_config.yml` and frontmatter
-* **Google Analytics** built-in; just put your [Tracking ID](https://support.google.com/analytics/answer/1008080?hl=en) in `_config.yml` as `google_analytics`
-* Custom **404 page** (called 404.html; to activate, move it to your project directory).
+Created for gh-pages (project page).
 
-# Installation
+This template was crafted having in mind the photobloggers.
 
-There are two ways to get started (choose one):
+It uses [Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll "Clean Blog") as its basis.
 
-1. **Install the [jekyll-theme-prologue gem](https://rubygems.org/gems/jekyll-theme-prologue).** Instructions are in the [Jekyll docs](https://jekyllrb.com/docs/themes/#installing-a-theme). After running `bundle install`, you can find the theme files by running `open $(bundle show jekyll-theme-prologue)`.  A sample working `_config.yml` file ships with the gem; if you want to activate it, move it to your project's root directory. It will do nothing until you move it there, replacing the default `_config.yml` file.
-2. **Fork or clone the [GitHub repository](https://github.com/chrisbobbe/jekyll-theme-prologue).** If you want to use [GitHub Pages](https://pages.github.com/), create a branch named `gh-pages`, and replace `theme: jekyll-theme-prologue` with `remote_theme: chrisbobbe/jekyll-theme-prologue` in the provided `_config.yml` ([GitHub Pages now supports open-source themes on GitHub](https://github.com/blog/2464-use-any-theme-with-github-pages)).
+----------
+## Change Log
 
-Next, make sure that `url` and `base_url` are set for your own website in `_config.yml`. For local testing, make them both blank. Add a photo avatar to your project, then set `avatar: path/to/your/avatar.jpg` in _config.yml; for example, `avatar: assets/images/avatar.jpg` (48x48 pixels works best). Poke around the sample `_config.yml` file to see how you can add your social profiles.
+### Version 2.2 (4/23/2018)
 
-# Build your homepage
+<a href="https://github.com/sunbliss/photorama/wiki/How-to-get-SSL-on-Jekyll%3F"> How to get SSL Certificate (Https) For Jekyll</a>
 
-1. **Your `_config.yml` file must include the following line or your homepage won't work**: `collections: [sections]`. This tells Jekyll to look in the _sections folder (which you will create) for your content and render it all on one page.
+### Version 2.1 (3/22/2017)
 
-2. **Create a `_sections` folder** in your project's root directory and start adding content to your homepage. Set a cover photo in any of the sections by adding `cover-photo: path/to/photo.jpg` and `cover-photo-alt: your alt text here` to the section's frontmatter. Sample content is provided in the [GitHub repository](https://github.com/chrisbobbe/jekyll-theme-prologue/tree/master/_sections).
-
-All new sections should be added as html or Markdown documents in the `_sections` folder. The following section variables can be set with [frontmatter](https://jekyllrb.com/docs/frontmatter/):
-- `title` (required)
-- `order` (required; orders the sequence of sections on the page. Example: `1`)
-- `cover-photo` (optional; sets a background image for the section. Example: `assets/images/banner.jpg`)
-- `cover-photo-alt` (required if using a cover photo. Describes the photo for screen readers and SEO; e.g. "Dome of Light art installation, Kaohsiung, Taiwan")
-- `icon` (optional; see [Font Awesome](http://fontawesome.io/icons/) for icon codes. Example: `fa-github`)
-- `auto-header` (optional; "use-title" is default, "none" for no header, or custom header text)
-- `hide` (optional; if `true`, the section won't appear)
-
-# Start blogging!
-
-Jekyll has great resources to get you started writing blog posts. Check out [this Jekyll Docs page](https://jekyllrb.com/docs/posts/) first. When you've written a post or two, copy the following into a new file in your project directory called `blog.html`, and you'll see a link to your blog from the homepage:
-
-```
----
-layout: blog
-title: My Blog
----
-```
-
--- and that's it!
-
-# Add a page
-
-To add a page, just make a new .html or .md file in your project directory. There's an example called `reading-list` [provided](https://github.com/chrisbobbe/jekyll-theme-prologue/blob/master/reading-list.md) with the GitHub repository. Add this frontmatter:
-
-```
----
-title: My New Page
-layout: page
----
-```
-
-You can also set these page variables in the frontmatter, if you want:
-- `subtitle`
-- `order` (orders links in the nav menu, e.g. `1`)
-- `icon` (optional; see [Font Awesome](http://fontawesome.io/icons/) for icon codes. Example: `fa-github`)
-- `hide` (optional; if `true`, a link won't appear in the nav menu. All this does is remove the nav link; your page will still be served to anyone who has the URL.)
-
-**This same set of frontmatter variables (including `title`) can also be set in `index.md` and `blog.html`.** You may want to give them titles, or hide the homepage link with `hide: true` if the homepage is the only page.
-
-For advanced SEO, this theme also lets you add `permalink` (see [Jekyll Docs](https://jekyllrb.com/docs/permalinks/#where-to-configure-permalinks)), `robots` (string, e.g. "noindex, nofollow"), and `canonical` (boolean; true is default) to any page or post.
-
-# Contributing
-
-Please feel free to submit issues and feature requests!
-
-# Credits
-
-Thanks to @andrewbanchich for his many Jekyll adaptations of HTML5 UP's elegant themes, which helped and inspired me, and of course many thanks to HTML5 UP.
-
-Original README from HTML5 UP:
-
-```
-Prologue by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+* Fixed script loading. 
+* Fixed padding bottom for the navbar toggle menu.
 
 
-This is Prologue, a simple, single page responsive site template. It features a
-clean, minimalistic design and a sticky sidebar with navigation-linked scrolling.
+### Version 2.0 (2/4/2017)
 
-Demo content images* are courtesy of the ridiculously talented Felicia Simion. Check out
-more of her amazing work over at deviantART:
+* HTTPS is now enforced. 
 
-http://ineedchemicalx.deviantart.com/
+~~**Custom Domains are not supported.**~~
 
-(* = Not included! Only meant for use with my own on-site demo, so please do NOT download
-and/or use any of Felicia's work without her explicit permission!)
+~~For the time being, the only way to apply a custom domain name is by removing HTTPS as of the previous version. 
+Hoping Github developers will give its users the ability to add a custom domain served under security.~~
 
-Demo banner images* courtesy of Unsplash, a radtastic collection of CC0 (public domain)
-images you can use for pretty much whatever.
+### Version 1.2 (1/31/2017)
 
-(* = Not included)
+* Fixed footer code so that the twitter icon links to the twitter_username instead of instagram_username.
 
-AJ
-aj@lkn.io | @ajlkn
+### Version 1.1 (7/15/2016)
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+* Improved galleries and search section.
+* Better rendering of the header text.
+
+### Version 1.0 (6/19/2016)
+* Initial Template
+
+----------
+
+ **IMPORTANT!!!**
+================
+
+### Before you begin: Change the URL and the BASEURL as well as the internal nav links in the _config.yml
+
+The **URL** should say `https://yourusername.github.io`
+
+The **BASEURL** should say `/repositoryname`
+
+**Internal nav** should say
+
+  nav:
+
+  - GALLERY: `"https://yourusername.github.io/repositoryname/gallery/"`
+  - JOURNAL: `"https://yourusername.github.io/repositoryname/journal/"`
+  - ABOUT: `"https://yourusername.github.io/repositoryname/about/`"
+
+If there are problems with loading assets like CSS files and images, make sure that both **URL** and **BASEURL** are set correctly!!! 
+
+----------
+
+~~**NOT FOR HTTPS served repos!!!**~~
+==================================
+
+~~* Applies for v1.2!~~
+
+If you want to use your **own domain** go to the root of your project's repository, create a CNAME file and add a line with your domain name, e.g. `www.yourdomain.com`.
+
+Go to your domain name registrar and add a CNAME record pointing your domain to GitHub Pages:
+- type: CNAME
+- host: www.yourdomainname.com
+- answer: yourusername.github.io/repositoryname
+- TTL: 300
+
+----------
+
+Usage
+============ 
+
+###Quick Start
+
+1. [Fork this repository](https://github.com/sunbliss/photorama/fork) to get started. 
+2. Go to `https://github.com/yourusername/photorama/settings`
+3. Rename the repository to your new project, e.g. *myphotoblog*
+2. Create a new branch called `gh-pages` in your repository. 
+3. Go to the branches directory at `https://github.com/yourusername/repositoryname/branches` and *change* **default branch** to **gh-pages**.
+4. Delete **master** branch. 
+3. GitHub will build your site automatically and publish it at `https://yourusername.github.io/repositoryname/`.  
+
+----------
+
+- The homepage welcomes the visitors with 3 animated photos of your choice. It is recommended that all three are landscape orientated for best view.
+
+To change the welcome content at the far left of the Home page go here: `/index.html` and fill the responding lines of the YAML with your desired text.
+
+----------
+
+- To enable **disqus** comments in the posts, change their front matter for comments to 'true'.
+
+You must have a registered account in disqus, where you will also register a forum for your website.
+
+Find the line `s.src = '//yourproject.disqus.com/embed.js';  // ` in the disqus_comments.html and REPLACE 'yourproject' with your forum shortname.
+
+----------
+
+- In order to send **newsletters** about your posts to your subscribers, you should register an account in [tinyletter](http://www.tinyletter.com " tinyletter").
+
+Find the line `'https://tinyletter.com/yourproject', ` in the *newsletter.html* and replace 'yourproject' with your registered website.
+
+You can always ommit the newsletter rendering by deleting the line `{% include newsletter.html %}
+` in the *default.html* layout.
+
+----------
+
+If you want to use the matching **NEWSLETTER** template, you must always create a new file  by copying its respective index.html and renaming it to e.g. 2016-March-newsletter.html and then save it inside the folder and the accompanying images inside the 'images folder', so it can be accessed to your viewers through their browser. In this case the root url for the above newsletter will be ***http://yourgithubusername.github.io/yourproject/2016-March-newsletter.html***. Copy this link and replace this part of the code `http://www.yoursite.com/newsletter/year-month-newsletter` with it.
+
+----------
+
+**TAGS** and **CATEGORIES** of the posts 
+
+When you add a tag or a category name in the front matter of a post, don't forget to add the responding markdown files in /journal/tag/ folder and in /journal/category folder, so they can always render when browsing the journal or searching in the respective page.
+
+----------
+
+All the credits and the helpers can be found at **ABOUT** page.
 
 
-Credits:
+----------
 
-	Demo Images:
-		Felicia Simion (ineedchemicalx.deviantart.com)
-		Unsplash (unsplash.com)
+Read <a href="https://sunbliss.github.io/photorama/journal/images-size-for-better-performance/">**this**</a> post if you want to ensure your website always loads fast.
 
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
 
-	Other
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		CSS3 Pie (css3pie.com)
-		background-size polyfill (github.com/louisremi)
-		Respond.js (j.mp/respondjs)
-		jquery.scrolly (@ajlkn)
-		jquery.scrollzer (@ajlkn)
-		Skel (skel.io)
-```
+----------
+
+I hope you will find it useful for your projects, photographic or not.
+
+
+----------
+
+
+##License
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Filippo Oretti, Dario Andrei
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+

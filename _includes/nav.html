@@ -1,41 +1,31 @@
-{%- comment -%}
-  Include vars:
-  section_items
-{%- endcomment -%}
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" style="margin-right:1em; z-index: 1;">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <i class="fa fa-bars fa-lg"></i>
+            </button>
+            <a href="{{ site.baseurl }}/" title="HOME"><img src="{{ site.baseurl }}/logo.png" alt="logo" style="width:150px;cursor:pointer;margin-top:15px;"/></a>
+        </div>
 
-<!-- Nav -->
-<nav id="nav">
-  <ul>
-    {%- assign _pages = site.html_pages | where_exp: "page", "page.hide != true" -%}
-    {%- unless _pages == null -%}
-      {%- assign _pages = _pages | sort: 'order' -%}
-      {%- for _page in _pages -%}
-        {%- assign _title = _page.title | default: _page.layout -%}
-        {%- assign _slug = _title | slugify -%}
-        {%- assign _icon = _page.icon | default: 'fa-link' -%}
-        {%- comment -%}<!-- page.url (no underscore) is the url of the current page-->{%- endcomment -%}
-        {%- if _page.url == page.url -%}
-          <li><a href="#" id="{{- _slug -}}" class="active">
-            <span class="icon {{ _icon }}">{{- _title -}}</span>
-          </a></li>
-        {%- elsif _page.url -%}
-          <li><a href="{{- _page.url | absolute_url -}}" id="{{- _slug -}}-link">
-            <span class="icon {{ _icon }}">{{- _title -}}</span>
-          </a></li>
-        {%- else -%}
-          <li><a href="{{- '/' | absolute_url -}}" id="broken-link"><span class="icon fa-unlink">[broken link]</span></a></li>
-        {%- endif -%}
-      {%- endfor -%}
-    {%- endunless -%}
-    {%- assign _sections = include.section_items | where_exp: "section", "section.hide != true" -%}
-    {%- if _pages[0] and _sections[0] -%}<hr>{%- endif -%}
-    {%- unless _sections == null -%}
-      {%- for _sect in _sections -%}
-        {%- assign _title = _sect.title | default: _sect.layout | default: 'Untitled' -%}
-        {%- assign _slug = _title | slugify -%}
-        {%- assign _icon = _sect.icon | default: 'fa-file' -%}
-        <li><a href="#{{- _slug -}}" id="{{- _slug -}}-link" class="scrolly"><span class="icon {{ _icon }}">{{- _title -}}</span></a></li>
-      {%- endfor -%}
-    {%- endunless -%}
-  </ul>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" style="margin-right:1em; text-shadow: -.025em -.025em 0 rgba(0, 133, 161, 0.75), .025em -.025em 0 rgba(0, 133, 161, 0.75), -.025em .025em 0 rgba(0, 133, 161, 0.75), .025em .025em 0 rgba(0, 133, 161, 0.75);">
+               {% for nav_hash in site.nav %}
+          {% for nav_item in nav_hash %}
+            {% assign lowercase_nav_item = nav_item[0] | downcase %}
+            {% if page.active == lowercase_nav_item %}
+              <li class="active"><a href="{{ nav_item[1] }}">{{ nav_item[0] }}</a></li>
+            {% else %}
+              <li><a href="{{ nav_item[1] }}">{{ nav_item[0] }}</a></li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+                            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
 </nav>
+

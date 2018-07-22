@@ -1,14 +1,26 @@
-<!DOCTYPE HTML>
-<!--
-Prologue by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-Jekyll integration by Chris Bobbe | chrisbobbe.github.io
--->
-<html>
-	{%- include head.html -%}
-	<body>
-		{{- content -}}
-		{%- include footer.html -%}
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<head>
+{% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url={{ site.baseurl }}/journal" />{% endif %}
+</head>
+
+<body>
+
+    {% include nav.html %}
+
+    {{ content }}
+
+    {% include search.html %}
+
+    {% include newsletter.html %}
+
+    {% include footer.html %}
+
+   {% include Scroll_to_Top.html %}  
+
+</body>
+
 </html>

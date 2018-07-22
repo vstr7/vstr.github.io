@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-{% include head.html %}
-
+---
+layout: compress
+---
+<!doctype html>
+<html class="no-js" lang="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}">
 <head>
-{% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url={{ site.baseurl }}/journal" />{% endif %}
+	{% include _head.html %}
 </head>
+<body id="top-of-page" class="{{ layout.format }}">
+	{% unless page.skip_boilerplate %}
+	{% include _navigation.html %}
+	{% endunless %}
 
-<body>
+	{% include _masthead.html %}
+	{{ content }}
 
-    {% include nav.html %}
+	{% unless page.skip_boilerplate %}
+	{% include _footer.html %}
+	{% endunless %}
 
-    {{ content }}
-
-    {% include search.html %}
-
-    {% include newsletter.html %}
-
-    {% include footer.html %}
-
-   {% include Scroll_to_Top.html %}  
-
+	{% include _footer_scripts.html %}
 </body>
-
 </html>

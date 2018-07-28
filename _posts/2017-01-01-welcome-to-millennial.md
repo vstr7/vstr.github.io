@@ -2,7 +2,7 @@
 layout: post
 title: "Hello world!"
 author: "vstr"
-categories: 记
+categories: documentation
 tags: [documentation,sample]
 image: Photo by Frame Harirak (6xxj2JTLWc4).jpg
 ---

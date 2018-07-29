@@ -6,26 +6,26 @@ disqus:
 google-ID: 'UA-112060364-2'
 
 menu:
-- {name: 'Finance Life', folder: 'pages', file: 'facts.html'}
-- {name: 'New idea', folder: 'pages', file: 'resources.html'}
-- {name: '杂', folder: 'pages', file: 'sample-posts.html'}
-- {name: '记', folder: 'pages', file: 'documentation.html'}
+- {name: 'Life', folder: 'pages', file: 'life.html'}
+- {name: 'New idea', folder: 'pages', file: 'new idea.html'}
+- {name: '杂', folder: 'pages', file: '杂.html'}
+- {name: '记', folder: 'pages', file: '记.html'}
 - {name: 'About', folder: 'pages', file: 'about.html'}
 - {name: 'Contact', folder: 'pages', file: 'contact.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
 - {icon: 'twitter', link: 'https://twitter.com/paululele'}
-- {icon: 'facebook', link: 'https://www.facebook.com/Le.Paul.94'}
-- {icon: 'instagram', link: 'https://instagram.com/paululele'}
-- {icon: 'envelope', link: 'mailto:l.nguyen.paul@gmail.com'}
+- {icon: 'weibo', link: 'https://weibo.com/u/2234374685?refer_flag=1001030001_&nick=Milan-oooooo'}
+- {icon: 'instagram', link: 'https://www.instagram.com/rossonerui'}
+- {icon: 'envelope', link: 'mailto:s836535989@gmail.com'}
 - {icon: 'rss-square', link: 'feed.xml'}
 # - {icon: 'rss-square', link: 'rss-feed.xml'}
 
 # Customize site text
 pagination:
-  next_page: 'Newer'
-  previous_page: 'Older'
+  next_page: 'next'
+  previous_page: 'Previous'
 
 sharing_button_prompt: 'Feel free to share!'
 

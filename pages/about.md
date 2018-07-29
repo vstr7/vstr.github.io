@@ -1,6 +1,7 @@
 ---
 layout: misc
 title: About me
+image: 8.jpg
 ---
 
 ![image1](https://github.com/vstr7/vstr7.github.io/blob/master/assets/img/8.jpg)

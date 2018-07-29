@@ -6,7 +6,7 @@ disqus:
 google-ID: 'UA-112060364-2'
 
 menu:
-- {name: 'Finance Life', folder: 'pages', file: 'facts.html'}
+- {name: 'Life', folder: 'pages', file: 'facts.html'}
 - {name: 'New idea', folder: 'pages', file: 'resources.html'}
 - {name: '杂', folder: 'pages', file: 'sample-posts.html'}
 - {name: '记', folder: 'pages', file: 'documentation.html'}

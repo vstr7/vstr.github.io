@@ -8,8 +8,8 @@ google-ID: 'UA-112060364-2'
 menu:
 - {name: 'Life', folder: 'pages', file: 'life.html'}
 - {name: 'New idea', folder: 'pages', file: 'new idea.html'}
-- {name: '杂', folder: 'pages', file: 'za.html'}
-- {name: '记', folder: 'pages', file: 'ji.html'}
+- {name: '杂', folder: 'pages', file: '杂.html'}
+- {name: '记', folder: 'pages', file: '记.html'}
 - {name: 'About', folder: 'pages', file: 'about.html'}
 - {name: 'Contact', folder: 'pages', file: 'contact.html'}
 

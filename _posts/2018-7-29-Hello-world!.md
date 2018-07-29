@@ -5,6 +5,7 @@ author: "vstr"
 categories: documentation
 tags: [documentation,sample]
 image: 6.jpg
+stickie: true
 ---
 
 诸事皆宜

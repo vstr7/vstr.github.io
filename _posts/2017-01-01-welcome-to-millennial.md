@@ -4,7 +4,7 @@ title: "Hello world!"
 author: "vstr"
 categories: documentation
 tags: [documentation,sample]
-image: Photo by Frame Harirak (6xxj2JTLWc4).jpg
+image: 7.jpg
 ---
 
 Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.
